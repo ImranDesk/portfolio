@@ -14,7 +14,7 @@ const skills = [
 
 const techSkills = [
   "VS Code",
-  "Cursor AI", 
+  "Cursor AI",
   "Framer Motion",
   "SCSS",
   "Responsive Design",
@@ -38,7 +38,7 @@ export const Skills = () => {
       { threshold: 0.3 }
     );
 
-    const skillsSection = document.getElementById('skills');
+    const skillsSection = document.getElementById("skills");
     if (skillsSection) {
       observer.observe(skillsSection);
     }
@@ -57,7 +57,7 @@ export const Skills = () => {
       >
         Skills
       </motion.h2>
-      
+
       <div className="grid grid-2" style={{ gap: "3rem", marginTop: "2rem" }}>
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -65,7 +65,13 @@ export const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 style={{ marginBottom: "1.5rem", fontSize: "1.2rem", fontWeight: "600" }}>
+          <h3
+            style={{
+              marginBottom: "1.5rem",
+              fontSize: "1.2rem",
+              fontWeight: "600",
+            }}
+          >
             Technical Skills
           </h3>
           <div className="skill-progress">
@@ -86,7 +92,9 @@ export const Skills = () => {
                   <motion.div
                     className="skill-fill"
                     initial={{ width: 0 }}
-                    animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
+                    animate={
+                      isVisible ? { width: `${skill.level}%` } : { width: 0 }
+                    }
                     transition={{ duration: 1, delay: index * 0.1 }}
                   />
                 </div>
@@ -101,7 +109,13 @@ export const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 style={{ marginBottom: "1.5rem", fontSize: "1.2rem", fontWeight: "600" }}>
+          <h3
+            style={{
+              marginBottom: "1.5rem",
+              fontSize: "1.2rem",
+              fontWeight: "600",
+            }}
+          >
             Technologies & Tools
           </h3>
           <div className="skills-container">

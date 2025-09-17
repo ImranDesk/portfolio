@@ -5,7 +5,7 @@ export const Home = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -28,7 +28,7 @@ export const Home = () => {
               Hello.
               <div className="hero-dot"></div>
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export const Home = () => {
             >
               I'm Imran
             </motion.h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -46,22 +46,22 @@ export const Home = () => {
             >
               Software Developer
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="hero-actions"
             >
-              <button 
-                onClick={() => scrollToSection('projects')}
+              <button
+                onClick={() => scrollToSection("projects")}
                 className="button-primary"
               >
                 Got a project?
               </button>
-              <a 
-                href="/resume.pdf" 
-                target="_blank" 
+              <a
+                href="/resume.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="button-ghost"
               >
@@ -69,7 +69,7 @@ export const Home = () => {
               </a>
             </motion.div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -84,14 +84,19 @@ export const Home = () => {
             <motion.img
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.6,
+                type: "spring",
+                stiffness: 100,
+              }}
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
               alt="Imran"
               className="hero-image"
             />
           </motion.div>
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,9 +104,13 @@ export const Home = () => {
           className="hero-meta"
         >
           <span className="muted">Suri, West Bengal, India · </span>
-          <a href="tel:+917470007436">+91 7470007436</a>
+          <a href="tel:+917470007436" className="muted">
+            +91 7470007436
+          </a>
           <span className="muted"> · </span>
-          <a href="mailto:syed16imran@gmail.com">syed16imran@gmail.com</a>
+          <a href="mailto:syed16imran@gmail.com" className="muted">
+            syed16imran@gmail.com
+          </a>
         </motion.div>
       </div>
     </section>
