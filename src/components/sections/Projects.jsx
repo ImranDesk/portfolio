@@ -1,51 +1,32 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import futuristic from '../../images/futuristic.png'
+import landing from '../../images/landing.png'
 
 const projects = [
   {
-    title: "Battleship Game",
-    stack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/imrandesk/battleship",
-    live: "https://imrandesk.github.io/battleship/",
+    title: "Futuristic Portfolio Website Using React",
+    stack: ["React", "framer Motion"],
+    github: "https://github.com/ImranDesk/futuristic-portfolio",
+    live: "https://futuristic-portfolio-nine.vercel.app",
     description:
-      "Implements basic data structures for the game, using a terminal to display ships and track hits/misses.",
+      "Created a futuristic portfolio website using React, Framer Motion.",
     image:
-      "https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=300&fit=crop",
+      futuristic,
     category: "Game Development",
   },
   {
-    title: "Movie Titles API",
-    stack: ["React", "API", "JavaScript"],
-    github: "https://github.com/imrandesk/movie-api",
-    live: "https://imrandesk.github.io/movie-api/",
+    title: "Responsive Landing Page",
+    stack: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/ImranDesk/landing-page-2",
+    live: "https://imrandesk.github.io/landing-page-2/",
     description:
-      "Uses a public movie API to build a collection list, allowing sorting and adding user favorites.",
+      "Created responsive static website using HTML, CSS, JavaScript.",
     image:
-      "https://images.unsplash.com/photo-1489599804151-0b0b0b0b0b0b?w=400&h=300&fit=crop",
+      landing,
     category: "Web Application",
   },
-  {
-    title: "JavaScript Calculator",
-    stack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/imrandesk/calculator",
-    live: "https://imrandesk.github.io/calculator/",
-    description:
-      "Uses simple algorithm concepts to produce arithmetic results in a terminal.",
-    image:
-      "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=400&h=300&fit=crop",
-    category: "Utility",
-  },
-  {
-    title: "SaaS Landing Page",
-    stack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/imrandesk/saas-landing",
-    live: "https://imrandesk.github.io/saas-landing/",
-    description:
-      "Uses HTML concepts, grid, and flexbox to create a landing page.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-    category: "Landing Page",
-  },
+ 
 ];
 
 export const Projects = () => {

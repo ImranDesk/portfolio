@@ -60,7 +60,7 @@ export const Home = () => {
                 Got a project?
               </button>
               <a
-                href="/resume.pdf"
+                href="../../pdf/Untitled Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-ghost"

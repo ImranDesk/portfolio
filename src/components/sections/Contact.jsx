@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -25,15 +26,43 @@ export const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Missing EmailJS configuration");
+      }
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        { publicKey }
+      );
+
+      if (response.status !== 200) {
+        throw new Error("Failed to send");
+      }
+
       setStatus({
         type: "success",
-        message: "Thanks! I will get back to you soon.",
+        message: "Thanks! Your message has been sent.",
       });
       setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      setStatus({
+        type: "error",
+        message: "Failed to send message. Please try again later.",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
