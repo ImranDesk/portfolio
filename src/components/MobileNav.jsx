@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import resumePdf from "../pdf/Untitled Resume.pdf";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 
@@ -124,6 +125,16 @@ export const MobileNav = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.2, delay: 0.3 }}
               >
+                <motion.a
+                  href={resumePdf}
+                  download
+                  className="button-ghost"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  style={{ padding: "0.75rem 2rem", fontSize: "1.1rem" }}
+                >
+                  Resume
+                </motion.a>
                 <motion.button
                   className="button-primary"
                   whileHover={{ scale: 1.05 }}

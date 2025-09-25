@@ -1,4 +1,5 @@
 import React from "react";
+import resumePdf from "../../pdf/Untitled Resume.pdf";
 import { motion } from "framer-motion";
 
 export const Home = () => {
@@ -59,12 +60,7 @@ export const Home = () => {
               >
                 Got a project?
               </button>
-              <a
-                href="../../pdf/Untitled Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-ghost"
-              >
+              <a href={resumePdf} download className="button-ghost">
                 My resume
               </a>
             </motion.div>
